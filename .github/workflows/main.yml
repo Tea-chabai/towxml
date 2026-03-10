@@ -30,6 +30,11 @@ jobs:
         run: |
           yarn
           yarn run build
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: ./dist
           
       # Runs a set of commands using the runners shell
       #- name: Update dist folder to repository
