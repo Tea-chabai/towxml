@@ -32,19 +32,19 @@ jobs:
           yarn run build
           
       # Runs a set of commands using the runners shell
-      - name: Update dist folder to repository
-        env:
+      #- name: Update dist folder to repository
+       # env:
           # 仓库用户名
-          REPO_USERNAME: "Tea-chabai"
-          # GitHub Pages仓库名
-          DIST_REPO: "towxml"
+        #  REPO_USERNAME: "Tea-chabai"
+        #  # GitHub Pages仓库名
+       #   DIST_REPO: "towxml"
           # GitHub Token
-          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
+         # GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
 
-        run: |
-          git config --global user.email "Action@GitHub.com"
-          git config --global user.name "GitHub Action"
+        #run: |
+        #  git config --global user.email "Action@GitHub.com"
+         # git config --global user.name "GitHub Action"
 
-          cd dist && git init && git add .
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://$GITHUB_TOKEN@github.com/$REPO_USERNAME/$DIST_REPO.git" master:master
+        #  cd dist && git init && git add .
+        #  git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+        #  git push --force --quiet "https://$GITHUB_TOKEN@github.com/$REPO_USERNAME/$DIST_REPO.git" master:master
