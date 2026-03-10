@@ -35,9 +35,9 @@ jobs:
       - name: Update dist folder to repository
         env:
           # 仓库用户名
-          REPO_USERNAME: ""
+          REPO_USERNAME: "Tea-chabai"
           # GitHub Pages仓库名
-          DIST_REPO: ""
+          DIST_REPO: "towxml"
           # GitHub Token
           GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
 
